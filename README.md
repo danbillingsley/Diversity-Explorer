@@ -1,15 +1,17 @@
 # Diversity-Explorer
-Explore how ethnic diversity varies with age accross the UK
+
+See this tool now at http://imactivate.com/diversityexplorer/ 
+
+Explore how ethnic diversity varies with age across England and Wales.
 
 This tool uses 2011 census data on ethnic group by sex by age from nomisweb (https://www.nomisweb.co.uk/census/2011/dc2101ew).
 
 # Notes
 
-These values are estimates.
-
-Calculations do not take migration into account.
-
-Scotland and Northern Ireland are not included because their census data is collated separately.
+* The website API uses a MySQL database and PHP.
+* These values are estimates.
+* Calculations do not take migration into account.
+* Scotland and Northern Ireland are not included because their census data is collated separately.
 
 # How to run
 Download the repository. Download Visual Studio 2019. Open the .sln file. Press Run.
