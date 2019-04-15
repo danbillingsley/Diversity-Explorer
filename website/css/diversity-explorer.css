@@ -1,0 +1,297 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16px;
+    background-color: #fdfdfd;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.44em;
+    text-rendering: optimizeLegibility;
+}
+
+.loading {
+    pointer-events: none;
+}
+
+a {
+    color: #183551;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+h3 {
+    font-size: 1em;
+}
+.notes {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+#loadingMessage {
+    display: none;
+    color: #189dd9;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#loadingMessage .fas {
+    margin-right: 0.2em;
+}
+
+.loading #loadingMessage {
+    display: block;
+}
+
+#main {
+    color: #333333;
+}
+
+header {
+    width: 100%;
+    padding: 0px;
+    font-size: 1.2em;
+    background-color: black;
+    color: white;
+}
+
+#main .holder,
+footer .holder {
+    padding: 1em 1em;
+}
+
+#main > .holder {
+    padding: 1em 1em 2em 1em;
+}
+
+header .holder {
+    padding-left: 0px;
+    text-align: center;
+    background-color: black;
+}
+
+.holder {
+    position: relative;
+    width: 1080px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.explanation {
+    text-align: center;
+}
+
+.holder select {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0.5em 0;
+    color: #333333;
+    background: #FAFAFA;
+    border-radius: 4px;
+    border: 1px solid #D3D3D3;
+    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    margin: 0;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #189dd9;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #189dd9;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.optionHolder {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.optionHolder label {
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+}
+
+#ageValue {
+    color: #189dd9;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 40px;
+}
+
+#overallHolder {
+    text-align: center;
+    margin: 1.3em 0;
+    font-weight: bold;
+}
+
+#overallValue {
+    font-size: 40pt;
+    line-height: 1em;
+    letter-spacing: 2px;
+    margin-bottom: 0.1em;
+    color: #183551;
+}
+
+#overallValueLabel {
+    font-size: 1.2em;
+    color: #183551;
+}
+
+.barRow {
+    width: 100%;
+    margin: 0.25em 0;
+}
+
+.barTitle {
+    text-overflow: ellipsis;
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+}
+
+.barWrapper {
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.barElement {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.barPercent {
+    display: inline-block;
+    margin-right: 0.25em;
+    color: white;
+    text-align: right;
+    width: 100%;
+}
+
+.percentWhite {
+    float: right;
+    margin-right: 0.25em;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.bar {
+    background-color: #189dd9;
+    display: inline-block;
+    width: 0;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+}
+
+.barRow:nth-child(2) .bar {
+    background-color: #189dd9;
+}
+
+.barHolder {
+    background-color: #183551;
+    width: 70%;
+}
+
+.barchartHolder {
+    margin: auto;
+    width: 70%;
+}
+
+.noUi-connect {
+    background: #189dd9;
+}
+
+.noUi-pips-horizontal {
+    height: 40px;
+}
+
+.noUi-horizontal {
+    margin-top: 5px;
+}
+
+.orLabel {
+    text-align: center;
+    font-weight: bold;
+    color: #183551;
+}
+
+#englandWalesAverage {
+    color: #189dd9;
+    font-size: 0.95em;
+    font-weight: bold;
+    margin-top: 0.2em;
+    text-align: center;
+}
+
+.barchartKeyHolder {
+    margin-top: 0.6em;
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.barchartKeySquare {
+    width: 1em;
+    height: 1em;
+    background-color: #189dd9;
+    overflow: hidden;
+}
+
+.barchartKey {
+    margin: 0 1em;
+}
+
+.barchartKey div {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.barchartKeyHolder div {
+    display: inline-block;
+}
+
+.barchartKey:nth-child(2) .barchartKeySquare {
+    background-color: #183551;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.0em;
+    }
+    .optionHolder, .barchartHolder, ul, .notes {   
+        width: auto;
+    }
+
+}

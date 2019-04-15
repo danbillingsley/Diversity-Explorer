@@ -1,0 +1,92 @@
+<head>
+    <title>Diversity Explorer</title>
+    <meta content="en-gb" http-equiv="Content-Language">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta id="viewportid" name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/diversity-explorer.js"></script>
+    <script type="text/javascript" src="js/nouislider.js"></script>
+    <link rel="stylesheet" href="css/nouislider.css" />
+    <link rel="stylesheet" href="css/diversity-explorer.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body onload="bodyLoad()" class="loading">
+    <div id="main">
+        <header>
+            <h1 class="holder">Diversity Explorer</h1>
+        </header>
+        <div class="holder">
+            <div id="loadingMessage"><i class="fas fa-cog fa-spin"></i>Loading</div>
+            <h2 class="explanation"><strong>Explore how ethnic diversity varies with age across the UK.</strong></h2>
+            <div class="optionHolder">
+                <label for="regionSelect">Select a region</label>
+                <select id="regionSelect" class="geographySelect" geography="Region" onchange="geographyUpdated(this)">
+                    <option value="null">Select region...</option>
+                </select>
+            </div>
+            <div class="orLabel">OR</div>
+            <div class="optionHolder">
+                <label for="localAuthoritySelect">Select a local authority</label>
+                <select id="localAuthoritySelect" class="geographySelect" geography="Local Authority" onchange="geographyUpdated(this)">
+                    <option value="null">Select local authority...</option>
+                </select>
+            </div>
+            <div class="optionHolder">
+                <label for="ageSlider">Select age range</label>
+                <div id="ageSlider"></div>
+                <div id="ageValue">25 to 40 years old</div>
+            </div>
+            <div id="results">
+                <div id="overallHolder">
+                    <div id="overallValue">-</div>
+                    <div id="overallValueLabel">percent BAME</div>
+                    <div id="englandWalesAverage"></div>
+                </div>
+                <div id="percentByEthnicityBarchart" class="barchartHolder hidden">
+                    <div class="barRow">
+                        <div class="barElement barTitle" title=""></div>
+                        <div class="barElement barHolder">
+                            <div class="barWrapper" title="% White">
+                                <div class="percentWhite"></div>
+                                <div class="bar" title="% BAME">
+                                    <div class="barPercent"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="barRow">
+                        <div class="barElement barTitle" title=""></div>
+                        <div class="barElement barHolder">
+                            <div class="barWrapper" title="% White">
+                                <div class="percentWhite"></div>
+                                <div class="bar" title="% BAME">
+                                    <div class="barPercent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barchartKeyHolder">
+                        <div class="barchartKey">
+                            <div class="barchartKeySquare">&nbsp;</div>
+                            <div class="barchartKeyLabel">% BAME</div>
+                        </div>
+                        <div class="barchartKey">
+                            <div class="barchartKeySquare">&nbsp;</div>
+                            <div class="barchartKeyLabel">% White</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes">
+                    <h3>Notes</h3>
+                    <ul>
+                        <li>This tool uses 2011 census data on <a href="https://www.nomisweb.co.uk/census/2011/dc2101ew" target="_blank">ethnic group by sex by age</a> from nomisweb.</li>
+                        <li>These values are estimates. To see our methods please visit our <a href="https://github.com/danbillingsley/Diversity-Explorer">Github repo</a>.</li>
+                        <li>Calculations do not take migration into account.</li>
+                        <li>Scotland and Northern Ireland are not included because their census data is collated separately.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
