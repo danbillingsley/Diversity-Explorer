@@ -56,19 +56,17 @@ header {
     color: white;
 }
 
+header h1 {
+    text-align: center;
+}
+
 #main .holder,
 footer .holder {
     padding: 1em 1em;
 }
 
 #main > .holder {
-    padding: 1em 1em 2em 1em;
-}
-
-header .holder {
-    padding-left: 0px;
-    text-align: center;
-    background-color: black;
+    padding: 1em;
 }
 
 .holder {
@@ -76,6 +74,14 @@ header .holder {
     width: 1080px;
     max-width: 100%;
     margin: auto;
+}
+
+
+header.holder {
+    padding-left: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: black;
 }
 
 .explanation {
