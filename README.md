@@ -13,6 +13,16 @@ This tool uses 2011 census data on ethnic group by sex by age from nomisweb (htt
 * Calculations do not take migration into account.
 * Scotland and Northern Ireland are not included because their census data is collated separately.
 
+# API Methods
+
+These links show the example JSON output from the API methods used by the website:
+
+Return details of all locations:
+http://imactivate.com/diversityexplorer/diversityExplorer_getLocations.php
+
+Return ethnicity data for a particular geography (Leeds local authority in this case):
+http://imactivate.com/diversityexplorer/diversityExplorer_getData.php?geographycode=E08000035
+
 # How to run
 Download the repository. Download Visual Studio 2019. Open the .sln file. Press Run.
 
