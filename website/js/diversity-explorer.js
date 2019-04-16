@@ -2,6 +2,7 @@ var yearsAdjustment;
 
 function bodyLoad() {
     yearsAdjustment = new Date().getFullYear() - 2011;
+    ageMinimum.innerHTML = yearsAdjustment;
     addSlider();
     getLocations();
 }
@@ -103,7 +104,10 @@ function addSlider() {
 
     ageSlider.noUiSlider.on("change", ageSlideAction);
     ageSlider.noUiSlider.on("slide", ageSlideAction);
-    ageSlider.noUiSlider.on("update", function (e) {
+    ageSlider.noUiSlider.on("update", function (values, handle) {
+        if (values[handle] < yearsAdjustment) {
+            ageSlider.noUiSlider.set(yearsAdjustment);
+        }
         ageSlideAction();
         calculateEthnicity(getSelectedGeography());
     });
@@ -116,7 +120,6 @@ function ageSlideAction(method) {
     } else {
         ageValue.innerHTML = sliderValues[0] + " - " + sliderValues[1] + " years old";
     }
-
 }
 
 function calculateEthnicity(geographyCode) {
@@ -231,12 +234,9 @@ Array.prototype.calculateBamePercent = function (lowerAge, upperAge) {
         if (upperAge >= lowerAgeBand && upperAge <= upperAgeBand) {
             multiplier = calculateMultiplier(upperAge, lowerAgeBand, upperAgeBand);
         }
-        console.log(multiplier);
-
         if (upperAge < lowerAgeBand) {
             addData = false;
         }
-
         if (addData == true) {
             var category = headingsToCategories[this[i].Ethnicity];
             outputEthnicityData[category] += parseInt(multiplier * Number(this[i].Count), 10);
@@ -269,9 +269,9 @@ function updateBar(barIndex, name, percent) {
 
     var barPercent = holder.querySelector(".barPercent");
     barPercent.innerHTML = "&nbsp;" + ((percent < 1) ? "<1" : percent) + "%&nbsp;";
-    
+
     var whitePercent = holder.querySelector(".percentWhite");
     whitePercent.innerHTML = 100 - percent + "%";
-    
+
     holder.parentElement.classList.remove("hidden");
 }
